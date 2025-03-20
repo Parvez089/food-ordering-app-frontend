@@ -9,7 +9,7 @@ const Header = () =>{
           <Link
             to='/'
             className='text-3xl font-bold tracking-tight text-orange-500'>
-            FoodCart
+            Food<span className='text-black'>Cart</span>
           </Link>
           <div className='md:hidden '>
             <MobileNav />
