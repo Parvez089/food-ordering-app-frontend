@@ -26,6 +26,8 @@ type Props = {
     currentUser: User;
     onSave: (userProfileData: UserFormData) => void;
     isPending: boolean;
+    title?: string;
+    buttonText?: string;
 }
 const UserProfileForm = ({onSave, isPending, currentUser}: Props)=>{
     const form = useForm<UserFormData>({
