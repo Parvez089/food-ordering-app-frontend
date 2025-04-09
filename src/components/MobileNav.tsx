@@ -18,10 +18,12 @@ export default function MobileNav() {
           {isAuthenticated ? (
             <span className='flex items-center font-bold gap-2 mt-5 ml-2 '>
               <CircleUserRound className='text-orange-500 ' />
-              {user?.email}
+              {user?.name}
             </span>
           ) : (
-            <span className='flex items-center font-bold gap-2 mt-5 ml-2 text-xl'>Welcome to MernEats.com</span>
+            <span className='flex items-center font-bold gap-2 mt-5 ml-2 text-xl'>
+              Welcome to MernEats.com
+            </span>
           )}
         </SheetTitle>
         <Separator />
@@ -29,7 +31,11 @@ export default function MobileNav() {
           {isAuthenticated ? (
             <MobileNavLinks />
           ) : (
-            <Button onClick={()=> loginWithRedirect()} className='flex-1 font-bold bg-orange-500 mr-2 ml-2'>Log In</Button>
+            <Button
+              onClick={() => loginWithRedirect()}
+              className='flex-1 font-bold bg-orange-500 mr-2 ml-2'>
+              Log In
+            </Button>
           )}
         </SheetDescription>
       </SheetContent>
