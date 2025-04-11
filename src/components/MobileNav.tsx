@@ -22,7 +22,7 @@ export default function MobileNav() {
             </span>
           ) : (
             <span className='flex items-center font-bold gap-2 mt-5 ml-2 text-xl'>
-              Welcome to MernEats.com
+              Welcome to FoodCart
             </span>
           )}
         </SheetTitle>
