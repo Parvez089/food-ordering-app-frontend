@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const AuthCallbackPage = ()=>{
     const navigate = useNavigate();
-    const {user} = useAuth0();
+    const {user,isLoading} = useAuth0();
     const {createUser} = useCreateMyUser();
 
     const hasCreatedUser = useRef(false)
@@ -18,7 +18,10 @@ const AuthCallbackPage = ()=>{
         }
        
         }
+        if(!isLoading){
         handleCreateUser();
+        }
+       
     },[createUser,navigate,user]);
 
     return <>Loading...</>
